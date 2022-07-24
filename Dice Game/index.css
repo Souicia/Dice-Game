@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  background-color: goldenrod;
+}
+
+main {
+  width: 500px;
+  height: auto;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+main .rules {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 80px;
+  height: 25px;
+  cursor: pointer;
+  background-color: goldenrod;
+}
+
+main .rounds {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: goldenrod;
+  cursor: pointer;
+  padding: 5px;
+}
+
+main h1 {
+  margin-top: 60px;
+  width: calc(100% - 20%);
+  text-align: center;
+}
+
+main .players {
+  width: calc(100% - 20%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main .players .player1,
+main .players .bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .players .player1 .player-stats,
+main .players .bot .bot-stats {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+main .players .score {
+  padding: 20px;
+  width: 40px;
+  background-color: goldenrod;
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: overlayAnimation 2s;
+}
+
+main .players .active {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  animation: overlayAnimation 2s;
+}
+
+main .players .total-won {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+main .play {
+  width: 160px;
+  height: 50px;
+  font-size: 1.3em;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 3px solid black;
+  margin-bottom: 30px;
+}
+
+main .reset {
+  width: 160px;
+  height: 50px;
+  font-size: 1.3em;
+  color: brown;
+  border: 3px solid brown;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  display: none;
+}
+
+main .play:hover,
+main .reset:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+main .play:active,
+main .reset:active {
+  box-shadow: none;
+}
+
+main .modal {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+  height: auto;
+  background-color: white;
+  top: 25%;
+  right: -100%;
+  border: 3px solid black;
+
+}
+
+main .modal button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: goldenrod;
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+main .modal button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main .modal h3 {
+  font-size: 26px;
+  margin-bottom: 0;
+}
+
+main .modal p {
+  width: calc(100% - 20%);
+  text-align: center;
+  font-size: 18px;
+}
+
+@keyframes overlayAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1500px){
+  main {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+  }
+
+  main .modal {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 110%);
+  }
+}

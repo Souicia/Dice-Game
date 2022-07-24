@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Dice Game</title>
+  </head>
+  <body>
+    <main>
+      <div class="modal" id="modal">
+        <button id="close"><span>x</span></button>
+        <h3>~~Rules~~</h3>
+        <p>
+          Enter amount of rounds you want to play.<br />
+          Click on Roll Die to start. <br />
+          First to reach 20 points win the round. <br />
+          Click on Reset Game when you win a round, and when you win the game.
+          <br />
+          When you win the game, re-enter the amount of rounds.<br />
+          Don't cheat by changing the Math.random to something not soooo random,
+          like constant 6s for you! Otherwise, the bot will be sad.
+          <br />
+          Try to win as many times as you can :)
+        </p>
+      </div>
+      <button class="rules" id="rules">Rules</button>
+      <button class="rounds" id="rounds">Enter amount of rounds</button>
+      <h1 class="player-turn" id="turn-id">Player 1 Turn</h1>
+      <div class="players">
+        <div class="player1">
+          <p class="player-stats" id="player-score">Score:</p>
+          <p class="score active" id="player-dice-score">-</p>
+          <p class="total-won" id="player-won">Times won:</p>
+        </div>
+        <div class="bot">
+          <p class="bot-stats" id="bot-score">Score:</p>
+          <p class="score" id="bot-dice-score">-</p>
+          <p class="total-won" id="bot-won">Times won:</p>
+        </div>
+      </div>
+      <button class="play" id="die">Roll Die 🎲</button>
+      <button class="reset" id="reset">Reset Game</button>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
